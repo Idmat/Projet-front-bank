@@ -1,91 +1,60 @@
-# Projet-front-bank
-Ce programme en C permet de gérer un système bancaire avec des fonctionnalités de création de compte, de gestion des transactions (dépôts et retraits), de visualisation des transactions, de visualisation des soldes, de visualisation des informations des clients, et de suppression de compte.
+Ce projet implémente un système de gestion bancaire en langage C, permettant la création, la gestion, et la suppression de comptes bancaires ainsi que la réalisation de transactions entre ces comptes.
 Fonctionnalités
 
-    Créer un compte
-    Dépôt/Retrait d'argent
-    Visualiser les transactions d'un compte
-    Visualiser le solde d'un compte
-    Visualiser les informations des clients
-    Supprimer un compte
-    Lister tous les comptes
-    Quitter le programme
+    Créer un compte client : Permet de créer un nouveau compte en saisissant les informations personnelles du client.
+    Lister les comptes : Affiche la liste de tous les comptes existants, triés par date de création. Cette fonctionnalité nécessite une authentification administrateur.
+    Effectuer des opérations sur le compte :
+        Transférer des fonds : Permet de transférer de l'argent d'un compte à un autre.
+        Dépôt : Permet d'ajouter de l'argent à un compte.
+        Retrait : Permet de retirer de l'argent d'un compte.
+        Voir les transactions : Affiche l'historique des transactions d'un compte spécifique.
+    Supprimer un compte : Permet de supprimer un compte après authentification administrateur.
+    Sauvegarde et Chargement : Sauvegarde automatique des comptes dans un fichier binaire et chargement des comptes au démarrage.
 
-Fichiers
 
-    comptes.txt : Stocke les informations des comptes.
-    transactions.txt : Stocke les informations des transactions.
-
-Compilation et Exécution
-
-Pour compiler et exécuter ce programme, vous aurez besoin d'un compilateur C comme gcc.
-Compilation
-
-bash
-
-gcc main.c -o banque
-
-Exécution
-
-bash
-
-./banque
-
-Utilisation
 Menu Principal
 
-Lorsque vous exécutez le programme, le menu principal apparaît avec les options suivantes :
+Après avoir lancé le programme, le menu principal propose les options suivantes :
 
-plaintext
+    Créer un compte
+    Lister les comptes
+    Opérations sur le compte
+    Supprimer un compte
+    Quitter
 
-**** Bienvenue dans notre BANQUE ****
-1. Créer un compte
-2. Opérations sur le compte
-3. Visualiser transactions
-4. Visualiser solde
-5. Visualiser identités des clients
-6. Supprimer un compte
-7. Lister tous les comptes
-8. Quitter
-Votre choix :
+Création d'un compte
 
-Créer un compte
+Lors de la création d'un compte, le programme demande les informations suivantes :
 
-Sélectionnez l'option 1 pour créer un nouveau compte. Vous serez invité à entrer les informations du client.
-Dépôt/Retrait d'argent
+    Nom
+    Postnom
+    Prénom
+    Date de naissance
+    Lieu de naissance
+    Adresse actuelle
+    Numéro de téléphone
+    Montant du dépôt initial
 
-Sélectionnez l'option 2 pour effectuer un dépôt ou un retrait. Choisissez 'D' pour un dépôt ou 'R' pour un retrait, puis entrez le numéro de compte et le montant.
-Visualiser les transactions
+Liste des comptes
 
-Sélectionnez l'option 3 pour visualiser les transactions d'un compte. Entrez le numéro de compte et les dates de début et de fin.
-Visualiser le solde
+Pour lister les comptes, il est nécessaire d'entrer le mot de passe administrateur. Par défaut, le mot de passe est 1234.
+Opérations sur le compte
 
-Sélectionnez l'option 4 pour visualiser le solde d'un compte. Entrez le numéro de compte.
-Visualiser les informations des clients
+Lors de l'exécution des opérations sur le compte, les options suivantes sont proposées :
 
-Sélectionnez l'option 5 pour visualiser les informations de tous les clients.
-Supprimer un compte
+    Transférer des fonds : Nécessite le numéro de compte du receveur et le montant à transférer.
+    Dépôt : Nécessite le montant à déposer.
+    Retrait : Nécessite le montant à retirer.
+    Voir vos transactions : Affiche l'historique des transactions du compte.
 
-Sélectionnez l'option 6 pour supprimer un compte. Entrez le numéro de compte à supprimer.
-Lister tous les comptes
+Suppression d'un compte
 
-Sélectionnez l'option 7 pour lister tous les comptes.
-Quitter
+Pour supprimer un compte, il est nécessaire d'entrer le mot de passe administrateur.
 
-Sélectionnez l'option 8 pour quitter le programme.
-Exemple d'utilisation
 
-Voici un exemple d'utilisation du programme :
+Ce projet a été réalisé par :
 
-    Créez un compte avec l'option 1 et entrez les informations requises.
-    Déposez de l'argent sur le compte avec l'option 2.
-    Visualisez les transactions du compte avec l'option 3.
-    Visualisez le solde du compte avec l'option 4.
-    Visualisez les informations des clients avec l'option 5.
-    Supprimez un compte avec l'option 6.
-    Listez tous les comptes avec l'option 7.
-    Quittez le programme avec l'option 8.
-
-Auteur
-
-Ce programme a été développé par [MBAYA KOLELA PATRICK,MATANDA-MATANDA-IDRISS, MBOMBO-KALALA-HENOCK, MBIYA-BANZA-JOSUE].
+    MBAYA-KOLELA Patrick
+    MBOMBO-KALALA Henock
+    MBIYA-BANZA Josue
+    MATANDA-MATANDA Idriss
